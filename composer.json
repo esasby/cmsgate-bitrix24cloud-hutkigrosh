@@ -1,0 +1,37 @@
+{
+  "name": "esas/cmsgate-bitrix24cloud-hutkigrosh",
+  "description": "Bitrix24 (cloud) payment gateway integration for Hutkigrosh",
+  "keywords": [
+    "cmsgate",
+    "esas",
+    "payment gateway",
+    "bitrix24",
+    "hutkigrosh",
+    "cloud",
+    "erip",
+    "api"
+  ],
+  "require": {
+    "php": ">= 5.6.0",
+    "esas/cmsgate-hutkigrosh-lib": "~v1.17.2",
+    "esas/cmsgate-bitrix24cloud-lib": "~v1.18.2",
+    "esas/cmsgate-core": "~v1.17.12",
+    "ext-pdo": "*"
+  },
+  "authors": [
+    {
+      "name": "esas",
+      "email": "support@hutkigrosh.by",
+      "homepage": "https://hutkigrosh.by"
+    }
+  ],
+  "config": {
+    "vendor-dir": "src/cmsgate-bitrix24cloud-hutkigrosh/vendor"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Esas\\Hutkigrosh\\": ""
+    }
+  }
+}
