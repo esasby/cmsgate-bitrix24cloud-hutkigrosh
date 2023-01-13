@@ -1,7 +1,6 @@
 <?php
 namespace esas\cmsgate\hutkigrosh;
 
-use esas\cmsgate\bitrix\BitrixRequest;
 use esas\cmsgate\protocol\RequestParamsBitrix24Cloud;
 use esas\cmsgate\BridgeConnector;
 use esas\cmsgate\CmsConnectorBitrix24Cloud;
@@ -10,7 +9,6 @@ use esas\cmsgate\descriptors\VendorDescriptor;
 use esas\cmsgate\descriptors\VersionDescriptor;
 use esas\cmsgate\hutkigrosh\view\client\CompletionPageHutkigrosh;
 use esas\cmsgate\hutkigrosh\view\client\CompletionPanelHutkigroshBitrix24Cloud;
-use esas\cmsgate\Registry;
 use esas\cmsgate\utils\CMSGateException;
 use esas\cmsgate\utils\SessionUtilsBridge;
 use esas\cmsgate\utils\URLUtils;
@@ -70,7 +68,6 @@ class RegistryHutkigroshBitrix24Cloud extends RegistryHutkigrosh
         if (strpos($currentURL, BridgeConnectorHutkigroshBitrix24::PATH_BILL_VIEW) !== false) {
             return $currentURL
                 . '?' . RequestParamsBitrix24Cloud::ORDER_ID . '=' . SessionUtilsBridge::getOrderCacheUUID();
-            return $currentURL;
         }
         else
             throw new CMSGateException('Incorrect URL generation');

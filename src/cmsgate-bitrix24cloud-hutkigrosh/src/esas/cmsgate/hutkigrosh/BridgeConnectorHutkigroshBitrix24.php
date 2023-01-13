@@ -1,9 +1,9 @@
 <?php
 namespace esas\cmsgate\hutkigrosh;
 
-use cmsgate_scope_bitrix_hutkigrosh\Com\Tecnick\Color\Exception;
 use esas\cmsgate\BridgeConnectorBitrix24;
 use esas\cmsgate\security\CryptServiceImpl;
+use Exception;
 use PDO;
 
 class BridgeConnectorHutkigroshBitrix24 extends BridgeConnectorBitrix24

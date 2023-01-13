@@ -68,6 +68,6 @@ if (strpos($request, 'api') !== false) {
         $errorPage->render();
     }
 } else {
-    http_response_code(404);
+    http_response_code(200);
 }
 
