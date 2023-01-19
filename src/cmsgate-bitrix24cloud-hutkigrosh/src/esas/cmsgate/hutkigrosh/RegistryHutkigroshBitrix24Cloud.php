@@ -20,12 +20,11 @@ class RegistryHutkigroshBitrix24Cloud extends RegistryHutkigrosh
 {
     public function __construct()
     {
-        define('read_config', true);
-        $this->config = require (dirname(dirname(dirname(dirname(dirname(__FILE__))))) . '/config.php');
+        $config = new BridgeConfigHutkigroshBitrix24Cloud();
 
-        $this->cmsConnector = new CmsConnectorBitrix24Cloud($this->config);
+        $this->cmsConnector = new CmsConnectorBitrix24Cloud($config);
         $this->paysystemConnector = new PaysystemConnectorHutkigrosh();
-        $this->registerService(BridgeConnector::BRIDGE_CONNECTOR_SERVICE_NAME, new BridgeConnectorHutkigroshBitrix24($this->config));
+        $this->registerService(BridgeConnector::BRIDGE_CONNECTOR_SERVICE_NAME, new BridgeConnectorHutkigroshBitrix24($config));
     }
 
     /**
@@ -77,7 +76,7 @@ class RegistryHutkigroshBitrix24Cloud extends RegistryHutkigrosh
     {
         return new ModuleDescriptor(
             "bitrix24cloud-hutkigrosh",
-            new VersionDescriptor("1.17.0", "2023-01-10"),
+            new VersionDescriptor("1.17.1", "2023-01-19"),
             "Bitrix24 Cloud Hutkigrosh",
             "https://github.com/esasby/cmsgate-bitrix24cloud-hutkigrosh/src/master/",
             VendorDescriptor::esas(),

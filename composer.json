@@ -14,8 +14,8 @@
   "require": {
     "php": ">= 5.6.0",
     "esas/cmsgate-hutkigrosh-lib": "~v1.17.2",
-    "esas/cmsgate-bitrix24cloud-lib": "~v1.18.2",
-    "esas/cmsgate-core": "~v1.17.12",
+    "esas/cmsgate-bitrix24cloud-lib": "~v1.18.4",
+    "esas/cmsgate-core": "~v1.17.13",
     "ext-pdo": "*"
   },
   "authors": [

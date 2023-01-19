@@ -13,6 +13,9 @@ class BridgeConnectorHutkigroshBitrix24 extends BridgeConnectorBitrix24
     const PATH_BILL_NOTIFY = '/api/bill/notify';
     const PATH_BILL_ALFACLICK = '/api/bill/alfaclick';
 
+    /**
+     * @var BridgeConfigHutkigroshBitrix24Cloud
+     */
     private $config;
 
     public function __construct($config)
@@ -28,9 +31,9 @@ class BridgeConnectorHutkigroshBitrix24 extends BridgeConnectorBitrix24
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
         return new PDO(
-            $this->config[CONFIG_PDO_DSN],
-            $this->config[CONFIG_PDO_USERNAME],
-            $this->config[CONFIG_PDO_PASSWORD],
+            $this->config->getPDO_DSN(),
+            $this->config->getPDOUsername(),
+            $this->config->getPDOPassword(),
             $opt);
     }
 
@@ -47,6 +50,6 @@ class BridgeConnectorHutkigroshBitrix24 extends BridgeConnectorBitrix24
 
     public function getHandlerActionUrl()
     {
-        return $this->config[CONFIG_BRIDGE_HOST] . self::PATH_BILL_ADD;
+        return $this->config->getBridgeHost() . self::PATH_BILL_ADD;
     }
 }
